@@ -3,7 +3,7 @@
 body {
     background-color: #000000;
     color: white;
-    padding-top: 100px;
+    padding: 100px 0 60px 0;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -31,6 +31,9 @@ input:hover, textarea:hover {
 
 button {
     cursor: pointer;
+    border-radius: 20px;
+    height: 30px;
+    border: none;
 }
 
 button:hover {
@@ -66,7 +69,6 @@ button:hover {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    padding-bottom: 40px;
 }
 
 /* post index item */
@@ -86,18 +88,57 @@ button:hover {
 
 /* post show */
 .post-show {
-    height: 600px;
+    margin: 10px;
+}
+
+.post-show .post-content {
+    height: 300px;
     padding: 20px;
     border: 0.5px solid silver;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     border-radius: 15px;
-    margin: 10px;
+    margin-bottom: 20px;
 }
 
 .post-show h2 {
     margin-bottom: 40px;
+}
+
+/* comments section */
+.comments-section {
+    height: 300px;
+    padding: 20px;
+    border: 0.5px solid silver;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.comments-section .add-comment-div {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex: 1;
+}
+
+.comments-section .add-comment-div input {
+    width: 70%;
+}
+
+.comments-section .add-comment-div button {
+    width: 90px;
+}
+
+.comments-section .comments-div {
+    padding: 20px;
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    overflow-y: auto;
 }
 
 /* post form */
@@ -113,9 +154,7 @@ button:hover {
 }
 
 .post-form form button {
-    width: 150px;
-    border-radius: 20px;
-    height: 30px;
     margin: 0 auto;
     margin-top: 50px;
+    width: 150px;
 }

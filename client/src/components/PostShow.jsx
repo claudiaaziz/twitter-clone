@@ -1,6 +1,7 @@
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import CommentsSection from './CommentsSection';
 
 export default function PostShow() {
     const { id } = useParams();
@@ -14,11 +15,14 @@ export default function PostShow() {
 
     return (
         <div className='post-show'>
-            <div>
-                <h2>{post?.title}</h2>
-                <p>{post?.body}</p>
+            <div className='post-content'>
+                <div>
+                    <h2>{post?.title}</h2>
+                    <p>{post?.body}</p>
+                </div>
+                <span>{post?.username}</span>
             </div>
-            <span>{post?.username}</span>
+            <CommentsSection postId={id} />
         </div>
     );
 }
