@@ -38,7 +38,7 @@ export default function PostForm() {
                         className='error-msg'
                     />
                     <label htmlFor='body'>Body:</label>
-                    <Field id='body' name='body' placeholder='Body' />
+                    <Field id='body' name='body' placeholder='Body' component='textarea' rows='10'/>
                     <ErrorMessage
                         name='body'
                         component='span'

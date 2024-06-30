@@ -16,8 +16,8 @@ a {
     text-decoration: none;
 }
 
-input {
-    padding: 10px;
+input, textarea {
+    padding: 15px;
     background-color: transparent;
     border-radius: 10px;
     border: 0.5px solid silver;
@@ -25,12 +25,16 @@ input {
     color: white
 }
 
-input:hover {
+input:hover, textarea:hover {
     border: 0.5px solid white;
 }
 
 button {
     cursor: pointer;
+}
+
+button:hover {
+    background-color: rgba(255, 255, 255, 0.876);
 }
 
 .error-msg {
@@ -62,6 +66,7 @@ button {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    padding-bottom: 40px;
 }
 
 /* post index item */
