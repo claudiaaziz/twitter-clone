@@ -14,10 +14,18 @@ export default function CommentsSection({ postId }) {
     const createComment = () => {
         const comment = { body: newComment, PostId: postId };
 
-        axios.post('http://localhost:5006/comments', comment).then((res) => {
-            setComments((prev) => [...prev, res.data]);
-            setNewComment('');
-        });
+        axios
+            .post('http://localhost:5006/comments', comment, {
+                headers: { accessToken: sessionStorage.getItem('accessToken') },
+            })
+            .then((res) => {
+                if (res.data.error) {
+                    console.error(res.data.error);
+                } else {
+                    setComments((prev) => [...prev, res.data]);
+                    setNewComment('');
+                }
+            });
     };
 
     return (

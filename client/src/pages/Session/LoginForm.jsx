@@ -11,10 +11,14 @@ export default function LoginForm() {
     };
 
     const onSubmit = (data) => {
-        axios
-            .post('http://localhost:5006/auth/login', data)
-            .then(res => console.log(res));
-            // .then(navigate('/'));
+        axios.post('http://localhost:5006/auth/login', data).then((res) => {
+            if (res.data.error) {
+                console.error(res.data.error);
+            } else {
+                sessionStorage.setItem('accessToken', res.data);
+                navigate('/');
+            }
+        });
     };
 
     return (
