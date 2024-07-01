@@ -44,6 +44,23 @@ button:hover {
     color: red;
 }
 
+.form {
+    height: 600px;
+    padding: 10px 50px;
+}
+
+.form form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form form button {
+    margin: 0 auto;
+    margin-top: 50px;
+    width: 150px;
+}
+
 /* navbar */
 .navbar {
     background-color: #000000;
@@ -139,22 +156,4 @@ button:hover {
     flex-direction: column;
     gap: 15px;
     overflow-y: auto;
-}
-
-/* post form */
-.post-form {
-    height: 600px;
-    padding: 10px 50px;
-}
-
-.post-form form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.post-form form button {
-    margin: 0 auto;
-    margin-top: 50px;
-    width: 150px;
 }

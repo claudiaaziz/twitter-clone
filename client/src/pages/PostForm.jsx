@@ -23,7 +23,7 @@ export default function PostForm() {
     };
 
     return (
-        <div className='post-form'>
+        <div className='form'>
             <Formik
                 initialValues={initialValues}
                 onSubmit={onSubmit}
